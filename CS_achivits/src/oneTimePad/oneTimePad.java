@@ -59,14 +59,8 @@ public class oneTimePad {
     private static String xor(String a, String b) {
         String ret_val = "";
         for (int index = 0; index <a.length(); index++) {
-            char c1 = a.charAt(index);
-            char c2 = b.charAt(index);
-            int i1 = (int) c1;
-            int i2 = (int) c2;
-            int i3 = i1 ^ i2;
-            char c3 = (char) i3;
-            ret_val += c3;
-            //ret_val += Integer.parseInt(a.charAt(index) + "") ^ Integer.parseInt(b.charAt(index) + "");
+            char a_char = a.charAt(index), b_char = b.charAt(index);
+            ret_val += (char)((int)a_char ^ (int)b_char);
         }
         return ret_val;
     }
